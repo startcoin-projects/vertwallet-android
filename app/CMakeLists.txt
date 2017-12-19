@@ -61,6 +61,30 @@ add_library( # Specifies the name of the library.
              src/main/jni/vertwallet-core/BRWallet.c
              src/main/jni/vertwallet-core/BRWallet.h
 
+             src/main/jni/vertwallet-core/vertcoinhash/Lyra2RE.c
+             src/main/jni/vertwallet-core/vertcoinhash/Lyra2.h
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/keccak.c
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/sph_bmw.h
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/sph_cubehash.h
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/sph_blake.h
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/hashblock.h
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/blake.c
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/sph_groestl.h
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/sph_keccak.h
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/cubehash.c
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/groestl.c
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/bmw.c
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/sph_skein.h
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/sph_types.h
+             src/main/jni/vertwallet-core/vertcoinhash/sha3/skein.c
+             src/main/jni/vertwallet-core/vertcoinhash/Sponge.h
+             src/main/jni/vertwallet-core/vertcoinhash/scryptn.c
+             src/main/jni/vertwallet-core/vertcoinhash/sha256.h
+             src/main/jni/vertwallet-core/vertcoinhash/Lyra2RE.h
+             src/main/jni/vertwallet-core/vertcoinhash/Lyra2.c
+             src/main/jni/vertwallet-core/vertcoinhash/scryptn.h
+             src/main/jni/vertwallet-core/vertcoinhash/Sponge.c
+
              src/main/jni/transition/core.c
              src/main/jni/transition/core.h
              src/main/jni/transition/JNIBase58.c
