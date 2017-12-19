@@ -40,11 +40,6 @@ static uint64_t _privKeyBalance;
 static size_t _transactionsCounter = 0;
 jclass _walletManagerClass;
 
-//#if BITCOIN_TESTNET
-//#error don't know bcash testnet fork height
-//#else // mainnet
-#define BCASH_FORKHEIGHT 478559
-//#endif
 
 static JNIEnv *getEnv() {
     __android_log_print(ANDROID_LOG_DEBUG, "Message from C: ", "getEnv Wallet");
