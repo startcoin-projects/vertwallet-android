@@ -89,27 +89,34 @@ public class BRApiManager {
             JSONArray arr = fetchRates(context);
             updateFeePerKb(context);
             if (arr != null) {
-                int length = arr.length();
-                for (int i = 1; i < length; i++) {
-                    CurrencyEntity tmp = new CurrencyEntity();
-                    try {
-                        JSONObject tmpObj = (JSONObject) arr.get(i);
-                        tmp.name = tmpObj.getString("name");
-                        tmp.code = tmpObj.getString("code");
-                        tmp.rate = (float) tmpObj.getDouble("rate");
-                        String selectedISO = BRSharedPrefs.getIso(context);
+
+                /**
+                 * Example of the array we're getting:
+                 *
+                 * [{USD:9.8, EUR:8.11}]
+                 *
+                 */
+
+                CurrencyEntity tmp = new CurrencyEntity();
+
+                try {
+                    JSONObject tmpObj = (JSONObject) arr.get(0);
+                    tmp.name = "United States dollar";
+                    tmp.code = "USD";
+                    tmp.rate = (float) tmpObj.getDouble("USD");
+                    String selectedISO = BRSharedPrefs.getIso(context);
 //                        Log.e(TAG,"selectedISO: " + selectedISO);
-                        if (tmp.code.equalsIgnoreCase(selectedISO)) {
+                    if (tmp.code.equalsIgnoreCase(selectedISO)) {
 //                            Log.e(TAG, "theIso : " + theIso);
 //                                Log.e(TAG, "Putting the shit in the shared preffs");
-                            BRSharedPrefs.putIso(context, tmp.code);
-                            BRSharedPrefs.putCurrencyListPosition(context, i - 1);
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                        BRSharedPrefs.putIso(context, tmp.code);
+                        BRSharedPrefs.putCurrencyListPosition(context, 0);
                     }
-                    set.add(tmp);
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
+
+                set.add(tmp);
             } else {
                 Log.e(TAG, "getCurrencies: failed to get currencies, response string: " + arr);
             }
@@ -169,32 +176,36 @@ public class BRApiManager {
 
 
     public static JSONArray fetchRates(Activity activity) {
-        String jsonString = urlGET(activity, String.format("https://%s/rates", BreadApp.HOST));
+        String jsonString = urlGET(activity, String.format("https://min-api.cryptocompare.com/data/price?fsym=VTC&tsyms=USD,EUR"));
         JSONArray jsonArray = null;
         if (jsonString == null) return null;
         try {
             JSONObject obj = new JSONObject(jsonString);
-            jsonArray = obj.getJSONArray("body");
+            jsonArray = new JSONArray().put(obj);
 
         } catch (JSONException ignored) {
         }
-        return jsonArray == null ? backupFetchRates(activity) : jsonArray;
-    }
 
-    public static JSONArray backupFetchRates(Activity activity) {
-        String jsonString = urlGET(activity, "https://bitpay.com/rates");
+        // TODO XXX backup solution.
 
-        JSONArray jsonArray = null;
-        if (jsonString == null) return null;
-        try {
-            JSONObject obj = new JSONObject(jsonString);
-
-            jsonArray = obj.getJSONArray("data");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
         return jsonArray;
+//        return jsonArray == null ? backupFetchRates(activity) : jsonArray;
     }
+
+//    public static JSONArray backupFetchRates(Activity activity) {
+//        String jsonString = urlGET(activity, "https://bitpay.com/rates");
+//
+//        JSONArray jsonArray = null;
+//        if (jsonString == null) return null;
+//        try {
+//            JSONObject obj = new JSONObject(jsonString);
+//
+//            jsonArray = obj.getJSONArray("data");
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//        return jsonArray;
+//    }
 
     public static void updateFeePerKb(Activity activity) {
         String jsonString = urlGET(activity, String.format("https://%s/fee-per-kb", BreadApp.HOST));
