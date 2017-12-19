@@ -4,3 +4,6 @@
 [submodule "app/src/main/secp/secp256k1"]
 	path = app/src/main/secp/secp256k1
 	url = https://github.com/bitcoin-core/secp256k1.git
+[submodule "app/src/main/jni/vertwallet-core"]
+	path = app/src/main/jni/vertwallet-core
+	url = https://github.com/sinetek/vertwallet-core
