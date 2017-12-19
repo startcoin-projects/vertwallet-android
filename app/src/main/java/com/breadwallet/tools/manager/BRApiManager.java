@@ -115,8 +115,26 @@ public class BRApiManager {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
                 set.add(tmp);
+
+                try {
+                    JSONObject tmpObj = (JSONObject) arr.get(0);
+                    tmp.name = "euro";
+                    tmp.code = "EUR";
+                    tmp.rate = (float) tmpObj.getDouble("EUR");
+                    String selectedISO = BRSharedPrefs.getIso(context);
+//                        Log.e(TAG,"selectedISO: " + selectedISO);
+                    if (tmp.code.equalsIgnoreCase(selectedISO)) {
+//                            Log.e(TAG, "theIso : " + theIso);
+//                                Log.e(TAG, "Putting the shit in the shared preffs");
+                        BRSharedPrefs.putIso(context, tmp.code);
+                        BRSharedPrefs.putCurrencyListPosition(context, 0);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                set.add(tmp);
+
             } else {
                 Log.e(TAG, "getCurrencies: failed to get currencies, response string: " + arr);
             }
