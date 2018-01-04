@@ -657,7 +657,7 @@
   <!-- Wallet unlocked message -->
   <string name="UnlockScreen.unlocked">Wallet Unlocked</string>
   <!-- Update PIN caption text -->
-  <string name="UpdatePin.caption">Remember this PIN. If you forget it, you won\'t be able to access your bitcoin.</string>
+  <string name="UpdatePin.caption">Remember this PIN. If you forget it, you won\'t be able to access your vertcoin.</string>
   <!-- PIN creation info. -->
   <string name="UpdatePin.createInstruction">Your PIN will be used to unlock your Vertwallet and send money.</string>
   <!-- Update PIN title -->
