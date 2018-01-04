@@ -7,13 +7,28 @@
                                                                     android:background="@drawable/bread_gradient"
                                                                     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/BRText"
-        android:layout_width="128dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="96dp"
-        android:src="@drawable/ic_bread_logo_white"
+    <!--<ImageView-->
+        <!--android:id="@+id/BRText"-->
+        <!--android:layout_width="128dp"-->
+        <!--android:layout_height="64dp"-->
+        <!--android:layout_marginTop="96dp"-->
+        <!--android:src="@drawable/ic_bread_logo_white"-->
 
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--android:layout_marginRight="8dp"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"/>-->
+
+    <com.breadwallet.presenter.customviews.BRText
+        android:id="@+id/BRText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="Vertwallet"
+        android:textColor="@color/white"
+        android:textSize="65sp"
+        app:customTFont="Celevenia.otf"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
