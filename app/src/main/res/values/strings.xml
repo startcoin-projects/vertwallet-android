@@ -520,6 +520,10 @@
   <string name="StartPaperPhrase.date">You last wrote down your paper key on %1$s</string>
   <!-- Start view message -->
   <string name="StartViewController.message">The easy and secure way to use vertcoin.</string>
+  <!-- Support email adress & twitter -->
+  <string name="Support.Title">Have questions or concerns?</string>
+  <!-- Support email adress & twitter -->
+  <string name="Support.Message">Visit our support Discord at https://discord.gg/SUy9Hsr or tweet us @vertcoin</string>
   <!-- Syncing view connectiong state header text -->
   <string name="SyncingView.connecting">Connecting</string>
   <!-- Syncing view header text -->

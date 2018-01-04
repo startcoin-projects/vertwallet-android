@@ -61,10 +61,12 @@ public class BreadApp extends Application {
     public static long backgroundedTime;
 
     private static Activity currentActivity;
+    private static volatile BreadApp instance;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        instance = this;
 
         if (0 != (getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE)) {
             HOST = "stage2.breadwallet.com";
@@ -92,6 +94,9 @@ public class BreadApp extends Application {
 
     }
 
+    public static BreadApp getInstance() {
+        return instance;
+    }
 
     public static Context getBreadContext() {
         return currentActivity == null ? SyncReceiver.app : currentActivity;

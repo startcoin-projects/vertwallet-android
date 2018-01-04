@@ -23,6 +23,7 @@ import android.view.ViewGroup;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
 
+import com.breadwallet.BreadApp;
 import com.breadwallet.R;
 import com.breadwallet.presenter.activities.BreadActivity;
 import com.breadwallet.presenter.activities.LoginActivity;
@@ -42,6 +43,7 @@ import com.breadwallet.tools.manager.BRSharedPrefs;
 import com.breadwallet.tools.threads.BRExecutor;
 import com.breadwallet.tools.util.BRConstants;
 import com.breadwallet.tools.util.Utils;
+import com.google.firebase.crash.FirebaseCrash;
 
 import java.util.List;
 
@@ -160,29 +162,48 @@ public class BRAnimator {
     }
 
     public static void showSupportFragment(Activity app, String articleId) {
-        if (app == null) {
-            Log.e(TAG, "showSupportFragment: app is null");
-            return;
-        }
-        FragmentSupport fragmentSupport = (FragmentSupport) app.getFragmentManager().findFragmentByTag(FragmentSupport.class.getName());
-        if (fragmentSupport != null && fragmentSupport.isAdded()) {
-            app.getFragmentManager().popBackStack();
-            return;
-        }
-        try {
-            fragmentSupport = new FragmentSupport();
-            if (articleId != null && !articleId.isEmpty()) {
-                Bundle bundle = new Bundle();
-                bundle.putString("articleId", articleId);
-                fragmentSupport.setArguments(bundle);
-            }
-            app.getFragmentManager().beginTransaction()
-                    .setCustomAnimations(0, 0, 0, R.animator.plain_300)
-                    .add(android.R.id.content, fragmentSupport, FragmentSend.class.getName())
-                    .addToBackStack(FragmentSend.class.getName()).commit();
-        } finally {
 
-        }
+        BRDialog.showCustomDialog(
+                app,
+                BreadApp.getInstance().getString(R.string.Support_Title),
+                BreadApp.getInstance().getString(R.string.Support_Message),
+                null,
+                null,
+                new BRDialogView.BROnClickListener() {
+                    @Override
+                    public void onClick(BRDialogView brDialogView) {
+                        brDialogView.dismissWithAnimation();
+                    }
+                },
+                null,
+                null,
+                0);
+        FirebaseCrash.log("showSupportFragment");
+
+        // Temporarily disable SupportFragment.
+//        if (app == null) {
+//            Log.e(TAG, "showSupportFragment: app is null");
+//            return;
+//        }
+//        FragmentSupport fragmentSupport = (FragmentSupport) app.getFragmentManager().findFragmentByTag(FragmentSupport.class.getName());
+//        if (fragmentSupport != null && fragmentSupport.isAdded()) {
+//            app.getFragmentManager().popBackStack();
+//            return;
+//        }
+//        try {
+//            fragmentSupport = new FragmentSupport();
+//            if (articleId != null && !articleId.isEmpty()) {
+//                Bundle bundle = new Bundle();
+//                bundle.putString("articleId", articleId);
+//                fragmentSupport.setArguments(bundle);
+//            }
+//            app.getFragmentManager().beginTransaction()
+//                    .setCustomAnimations(0, 0, 0, R.animator.plain_300)
+//                    .add(android.R.id.content, fragmentSupport, FragmentSend.class.getName())
+//                    .addToBackStack(FragmentSend.class.getName()).commit();
+//        } finally {
+//
+//        }
 
     }
 
