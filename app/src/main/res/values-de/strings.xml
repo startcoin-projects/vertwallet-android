@@ -141,7 +141,7 @@
   <!-- Word label eg. Word #1, Word #2 -->
   <string name="ConfirmPaperPhrase.word">Wort #%1$s</string>
   <!-- Bitcoin denomination picker label -->
-  <string name="DefaultCurrency.bitcoinLabel">Bitcoin-Anzeigeeinheit</string>
+  <string name="DefaultCurrency.bitcoinLabel">Vertcoin-Anzeigeeinheit</string>
   <!-- Exchange rate label -->
   <string name="DefaultCurrency.rateLabel">Wechselkurs</string>
   <!-- Email unavailable alert title -->
@@ -171,7 +171,7 @@
   <!-- Checking private key balance progress view text -->
   <string name="Import.checking">Das Privatschlüsselguthaben wird überprüft …</string>
   <!-- Sweep private key confirmation message -->
-  <string name="Import.confirm">%1$s von diesem privaten Schlüssel in Ihr Wallet senden? Das Bitcoin-Netzwerk erhält eine Gebühr von %2$s.</string>
+  <string name="Import.confirm">%1$s von diesem privaten Schlüssel in Ihr Wallet senden? Das Vertcoin-Netzwerk erhält eine Gebühr von %2$s.</string>
   <!-- Duplicate key error message -->
   <string name="Import.Error.duplicate">Dieser private Schlüssel befindet sich bereits in deinem Wallet.</string>
   <!-- empty private key error message -->
@@ -215,9 +215,9 @@
   <!-- Ignore jailbreak warning button -->
   <string name="JailbreakWarnings.ignore">Ignorieren</string>
   <!-- Jailbreak warning message -->
-  <string name="JailbreakWarnings.messageWithBalance">DAS GERÄT IST NICHT LÄNGER SICHER\nJede beliebige „Jailbreak“-App kann auf Breads Keychain-Daten zugreifen und deine Bitcoins stehlen! Lösche dieses Wallet unverzüglich und stelle es auf einem sicheren Gerät wieder her.</string>
+  <string name="JailbreakWarnings.messageWithBalance">DAS GERÄT IST NICHT LÄNGER SICHER\nJede beliebige „Jailbreak“-App kann auf Breads Keychain-Daten zugreifen und deine Vertcoins stehlen! Lösche dieses Wallet unverzüglich und stelle es auf einem sicheren Gerät wieder her.</string>
   <!-- Jailbreak warning message -->
-  <string name="JailbreakWarnings.messageWithoutBalance">DAS GERÄT IST NICHT LÄNGER SICHER\nJede beliebige „Jailbreak“-App kann auf Breads Keychain-Daten zugreifen und deine Bitcoins stehlen. Bitte setze Bread ausschließlich auf Geräten ohne Jailbreak ein.</string>
+  <string name="JailbreakWarnings.messageWithoutBalance">DAS GERÄT IST NICHT LÄNGER SICHER\nJede beliebige „Jailbreak“-App kann auf Breads Keychain-Daten zugreifen und deine Vertcoins stehlen. Bitte setze Bread ausschließlich auf Geräten ohne Jailbreak ein.</string>
   <!-- Jailbreak warning title -->
   <string name="JailbreakWarnings.title">ACHTUNG</string>
   <!-- Wipe wallet button -->
@@ -235,7 +235,7 @@
   <!-- Manage wallet modal title -->
   <string name="ManageWallet.title">Wallet verwalten</string>
   <!-- Buy bitcoin title -->
-  <string name="MenuButton.buy">Bitcoin kaufen</string>
+  <string name="MenuButton.buy">Vertcoin kaufen</string>
   <!-- Menu button title -->
   <string name="MenuButton.lock">Wallet sperren</string>
   <!-- Menu button title -->
@@ -279,9 +279,9 @@
   <!-- Payment too small alert title -->
   <string name="PaymentProtocol.Errors.smallOutputError">Die Zahlung konnte nicht durchgeführt werden</string>
   <!-- Amount too small error message -->
-  <string name="PaymentProtocol.Errors.smallPayment">Bitcoin-Zahlungen können nicht geringer als %1$s sein.</string>
+  <string name="PaymentProtocol.Errors.smallPayment">Vertcoin-Zahlungen können nicht geringer als %1$s sein.</string>
   <!-- Output too small error message. -->
-  <string name="PaymentProtocol.Errors.smallTransaction">Bitcoin-Transaktionsausgaben können nicht geringer als %1$s sein.</string>
+  <string name="PaymentProtocol.Errors.smallTransaction">Vertcoin-Transaktionsausgaben können nicht geringer als %1$s sein.</string>
   <!-- Unsupported signature type payment protocol error message -->
   <string name="PaymentProtocol.Errors.unsupportedSignatureType">Nicht unterstützter Signaturtyp</string>
   <!-- Untrusted certificate payment protocol error message -->
@@ -368,7 +368,7 @@
   <string name="RecoverWallet.subheader_reset_pin">Gib die Wörter des Offlineschlüssels in die Kästen unten ein, um deine PIN zurückzusetzen.</string>
   <!-- No amount entered error message. -->
   <string name="RequestAnAmount.noAmount">Bitte geben Sie zuerst einen Betrag ein.</string>
-  <!-- Request a specific amount of bitcoin -->
+  <!-- Request a specific amount of vertcoin -->
   <string name="RequestAnAmount.title">Einen Betrag anfordern</string>
   <!-- Alert action button label -->
   <string name="ReScan.alertAction">Synchronisieren</string>
@@ -379,7 +379,7 @@
   <!-- extimated time -->
   <string name="ReScan.body1">20–45 Minuten</string>
   <!-- Syncing explanation -->
-  <string name="ReScan.body2">Wenn eine Transaktion im Bitcoin-Netzwerk, aber nicht in deinem Bread als abgeschlossen angezeigt wird.</string>
+  <string name="ReScan.body2">Wenn eine Transaktion im Vertcoin-Netzwerk, aber nicht in deinem Bread als abgeschlossen angezeigt wird.</string>
   <!-- Syncing explanation -->
   <string name="ReScan.body3">Sie erhalten wiederholt eine Fehlermeldung, dass Ihre Transaktion abgewiesen wurde.</string>
   <!-- Start Sync button label -->
@@ -405,7 +405,7 @@
   <!-- Security Center Info -->
   <string name="SecurityCenter.info">Aktiviere alle Sicherheitsfunktionen für maximalen Schutz.</string>
   <!-- Paper Key button description -->
-  <string name="SecurityCenter.paperKeyDescription">Die einzige Möglichkeit, wie du auf deine Bitcoins zugreifen kannst, falls du dein Smartphone verlierst oder wechselst.</string>
+  <string name="SecurityCenter.paperKeyDescription">Die einzige Möglichkeit, wie du auf deine Vertcoins zugreifen kannst, falls du dein Smartphone verlierst oder wechselst.</string>
   <!-- Paper Key button title -->
   <string name="SecurityCenter.paperKeyTitle">Offlineschlüssel</string>
   <!-- PIN button description -->
@@ -445,7 +445,7 @@
   <!-- Payee identity not certified alert title. -->
   <string name="Send.identityNotCertified">die Identität des Zahlungsempfängers ist nicht bestätigt.</string>
   <!-- Invalid address alert message -->
-  <string name="Send.invalidAddressMessage">Die Zieladresse ist keine gültige Bitcoin-Adresse.</string>
+  <string name="Send.invalidAddressMessage">Die Zieladresse ist keine gültige Vertcoin-Adresse.</string>
   <!-- Invalid address on pasteboard message -->
   <string name="Send.invalidAddressOnPasteboard">Pasteboard enthält keine gültige Bitcoin-Adresse.</string>
   <!-- Invalid address alert title -->
@@ -473,7 +473,7 @@
   <!-- Send money to label -->
   <string name="Send.toLabel">An</string>
   <!-- Adress already used alert message - first part -->
-  <string name="Send.UsedAddress.firstLine">Bitcoin-Adressen sind lediglich zur einmaligen Benutzung vorgesehen.</string>
+  <string name="Send.UsedAddress.firstLine">Vertcoin-Adressen sind lediglich zur einmaligen Benutzung vorgesehen.</string>
   <!-- Adress already used alert message - second part -->
   <string name="Send.UsedAddress.secondLIne">Durch eine mehrfache Verwendung können sowohl du als auch der Empfänger leichter identifiziert werden und falls der Empfänger die Adresse nicht direkt kontrolliert, kann das Verluste bedeuten.</string>
   <!-- Adress already used alert title -->
@@ -635,7 +635,7 @@
   <!-- "Sent [$5] to [address]" => This is the "to [address]" part. -->
   <string name="TransactionDetails.to">an %1$s</string>
   <!-- Transaction ID header -->
-  <string name="TransactionDetails.txHashHeader">Bitcoin-Transaktions-ID</string>
+  <string name="TransactionDetails.txHashHeader">Vertcoin-Transaktions-ID</string>
   <!-- (this transaction was) Received at this address: -->
   <string name="TransactionDirection.address">An dieser Adresse empfangen</string>
   <!-- (this transaction was) Sent to this address: -->
@@ -663,7 +663,7 @@
   <!-- Wallet unlocked message -->
   <string name="UnlockScreen.unlocked">Wallet entsperrt</string>
   <!-- Update PIN caption text -->
-  <string name="UpdatePin.caption">Merke dir diese PIN. Falls du sie vergisst, kannst du nicht mehr auf deine Bitcoins zugreifen.</string>
+  <string name="UpdatePin.caption">Merke dir diese PIN. Falls du sie vergisst, kannst du nicht mehr auf deine Vertcoin zugreifen.</string>
   <!-- PIN creation info. -->
   <string name="UpdatePin.createInstruction">Deine PIN wird verwendet, um dein Bread zu entsperren und Geld zu versenden.</string>
   <!-- Update PIN title -->
