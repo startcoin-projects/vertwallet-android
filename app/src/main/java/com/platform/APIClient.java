@@ -656,49 +656,51 @@ public class APIClient {
         if (ActivityUTILS.isMainThread()) {
             throw new NetworkOnMainThreadException();
         }
-        String furl = "/me/features";
-        Request req = new Request.Builder()
-                .url(buildUrl(furl))
-                .get().build();
-        Response res = sendRequest(req, true, 0);
-        if (res == null) {
-            Log.e(TAG, "updateFeatureFlag: error fetching features");
-            return;
-        }
 
-        if (!res.isSuccessful()) {
-            Log.e(TAG, "updateFeatureFlag: request was unsuccessful: " + res.code() + ":" + res.message());
-            return;
-        }
-
-        try {
-            String j = res.body().string();
-            if (j.isEmpty()) {
-                Log.e(TAG, "updateFeatureFlag: JSON empty");
-                return;
-            }
-
-            JSONArray arr = new JSONArray(j);
-            for (int i = 0; i < arr.length(); i++) {
-                try {
-                    JSONObject obj = arr.getJSONObject(i);
-                    String name = obj.getString("name");
-                    String description = obj.getString("description");
-                    boolean selected = obj.getBoolean("selected");
-                    boolean enabled = obj.getBoolean("enabled");
-                    boolean isPrivate = obj.getBoolean("private");
-                    BRSharedPrefs.putFeatureEnabled(ctx, enabled, name);
-                } catch (Exception e) {
-                    Log.e(TAG, "malformed feature at position: " + i + ", whole json: " + j, e);
-                }
-
-            }
-        } catch (IOException | JSONException e) {
-            Log.e(TAG, "updateFeatureFlag: failed to pull up features");
-            e.printStackTrace();
-        } finally {
-            res.close();
-        }
+        // Disable remote feature flags (including buy support)
+//        String furl = "/me/features";
+//        Request req = new Request.Builder()
+//                .url(buildUrl(furl))
+//                .get().build();
+//        Response res = sendRequest(req, true, 0);
+//        if (res == null) {
+//            Log.e(TAG, "updateFeatureFlag: error fetching features");
+//            return;
+//        }
+//
+//        if (!res.isSuccessful()) {
+//            Log.e(TAG, "updateFeatureFlag: request was unsuccessful: " + res.code() + ":" + res.message());
+//            return;
+//        }
+//
+//        try {
+//            String j = res.body().string();
+//            if (j.isEmpty()) {
+//                Log.e(TAG, "updateFeatureFlag: JSON empty");
+//                return;
+//            }
+//
+//            JSONArray arr = new JSONArray(j);
+//            for (int i = 0; i < arr.length(); i++) {
+//                try {
+//                    JSONObject obj = arr.getJSONObject(i);
+//                    String name = obj.getString("name");
+//                    String description = obj.getString("description");
+//                    boolean selected = obj.getBoolean("selected");
+//                    boolean enabled = obj.getBoolean("enabled");
+//                    boolean isPrivate = obj.getBoolean("private");
+//                    BRSharedPrefs.putFeatureEnabled(ctx, enabled, name);
+//                } catch (Exception e) {
+//                    Log.e(TAG, "malformed feature at position: " + i + ", whole json: " + j, e);
+//                }
+//
+//            }
+//        } catch (IOException | JSONException e) {
+//            Log.e(TAG, "updateFeatureFlag: failed to pull up features");
+//            e.printStackTrace();
+//        } finally {
+//            res.close();
+//        }
 
     }
 
