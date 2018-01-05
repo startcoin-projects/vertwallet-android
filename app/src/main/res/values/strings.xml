@@ -373,7 +373,7 @@
   <!-- extimated time -->
   <string name="ReScan.body1">20-45 minutes</string>
   <!-- Syncing explanation -->
-  <string name="ReScan.body2">If a transaction shows as completed on the vertcoin network but not in your Vertwallet.</string>
+  <string name="ReScan.body2">If a transaction shows as completed on the bitcoin network but not in your Vertwallet.</string>
   <!-- Syncing explanation -->
   <string name="ReScan.body3">You repeatedly get an error saying your transaction was rejected.</string>
   <!-- Start Sync button label -->
