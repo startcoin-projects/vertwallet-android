@@ -5,7 +5,7 @@
   <!-- About screen blog label -->
   <string name="About.blog">Blog</string>
   <!-- About screen footer -->
-  <string name="About.footer">Créé par l\'équipe mondiale de Bread. Modifications par l'équipe Vertcoin. Version %1$s</string>
+  <string name="About.footer">Créé par l\'équipe mondiale de Bread. Modifications par l\'équipe Vertcoin. Version %1$s</string>
   <!-- Privay Policy button label -->
   <string name="About.privacy">Politique de confidentialité</string>
   <!-- About screen reddit label -->
@@ -723,7 +723,7 @@
   <!-- Failed wipe wallet alert title -->
   <string name="WipeWallet.failedTitle">Échec</string>
   <!-- Enter phrase to wipe wallet instruction. -->
-  <string name="WipeWallet.instruction">Pour créer ou restaurer un portefeuille, vous devez d\abord effacer le portefeuille actuellement installé. Entrez la clé papier du portefeuille actuel pour continuer.</string>
+  <string name="WipeWallet.instruction">Pour créer ou restaurer un portefeuille, vous devez d\'abord effacer le portefeuille actuellement installé. Entrez la clé papier du portefeuille actuel pour continuer.</string>
   <!-- Start wipe wallet view message -->
   <string name="WipeWallet.startMessage">La création ou la restauration d\'un autre portefeuille vous permet d\'accéder et de gérer différents portefeuilles Vertwallet depuis cet appareil.</string>
   <!-- Start wipe wallet view warning -->
