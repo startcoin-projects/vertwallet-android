@@ -194,7 +194,7 @@ public class BRApiManager {
 
 
     public static JSONArray fetchRates(Activity activity) {
-        String jsonString = urlGET(activity, String.format("https://min-api.cryptocompare.com/data/price?fsym=VTC&tsyms=USD,EUR"));
+        String jsonString = urlGET(activity, String.format("https://min-api.cryptocompare.com/data/price?fsym=DASH&tsyms=USD,EUR"));
         JSONArray jsonArray = null;
         if (jsonString == null) return null;
         try {
