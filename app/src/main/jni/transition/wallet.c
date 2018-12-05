@@ -950,7 +950,7 @@ JNIEXPORT jbyteArray JNICALL Java_com_breadwallet_wallet_BRWalletManager_getSeed
 
 JNIEXPORT jboolean JNICALL Java_com_breadwallet_wallet_BRWalletManager_isTestNet(JNIEnv *env,
                                                                                  jobject thiz) {
-    return VERTCOIN_TESTNET ? JNI_TRUE : JNI_FALSE;
+    return BITCOIN_TESTNET ? JNI_TRUE : JNI_FALSE;
 }
 
 JNIEXPORT jint JNICALL Java_com_breadwallet_wallet_BRWalletManager_getTxSize(
@@ -987,8 +987,7 @@ JNIEXPORT jbyteArray JNICALL Java_com_breadwallet_wallet_BRWalletManager_sweepBC
     __android_log_print(ANDROID_LOG_DEBUG, "Message from C: ", "getSeedFromPhrase");
 
     /*
-     * This is not something we need in the vertwallet-core.
+     * This is not something we need in the dashwallet-core.
      */
     return NULL;
 }
-

@@ -54,7 +54,7 @@ android {
         bread {
             applicationId "com.vertwallet"
             dimension "mode"
-            resValue "string", "app_name", "Vertwallet"
+            resValue "string", "app_name", "Dashwallet"
             buildConfigField "boolean", "BITCOIN_TESTNET", "false"
 
             externalNativeBuild {
@@ -62,7 +62,7 @@ android {
                     // When you specify a version of CMake, as shown below,
                     // the Android plugin searches for its binary within your
                     // PATH environmental variable.
-                    cFlags "-DVERTCOIN_TESTNET=0"
+                    cFlags "-DBITCOIN_TESTNET=0"
                     targets "core-lib"
                 }
             }
@@ -71,7 +71,7 @@ android {
         breadTestnet {
             applicationId "com.verttestnet"
             dimension "mode"
-            resValue "string", "app_name", "Vertwallet-testnet"
+            resValue "string", "app_name", "dashwallet-testnet"
             buildConfigField "boolean", "BITCOIN_TESTNET", "true"
 
             externalNativeBuild {
@@ -79,7 +79,7 @@ android {
                     // When you specify a version of CMake, as shown below,
                     // the Android plugin searches for its binary within your
                     // PATH environmental variable.
-                    cFlags "-DVERTCOIN_TESTNET=1"
+                    cFlags "-DBITCOIN_TESTNET=1"
                     targets "core-lib"
                 }
             }

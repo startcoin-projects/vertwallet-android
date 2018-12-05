@@ -86,11 +86,11 @@ Java_com_breadwallet_tools_security_BitcoinUrlHandler_parsePaymentRequest(JNIEnv
 
     __android_log_print(ANDROID_LOG_DEBUG, "parsePaymentRequest",
                         "nativeRequest->details->network: %s, "
-                                "VERTCOIN_TESTNET: %d", nativeRequest->details->network,
-                        VERTCOIN_TESTNET);
+                                "BITCOIN_TESTNET: %d", nativeRequest->details->network,
+                        BITCOIN_TESTNET);
 
-    if ((strcmp(nativeRequest->details->network, "main") == 0 && VERTCOIN_TESTNET == 1) ||
-        (strcmp(nativeRequest->details->network, "main") != 0 && VERTCOIN_TESTNET == 0)) {
+    if ((strcmp(nativeRequest->details->network, "main") == 0 && BITCOIN_TESTNET == 1) ||
+        (strcmp(nativeRequest->details->network, "main") != 0 && BITCOIN_TESTNET == 0)) {
         (*env)->SetIntField(env, entity, jerror, 3);
         return entity;
     }
